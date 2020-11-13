@@ -23,15 +23,15 @@ a
   grid-template-rows: auto
   grid-template-columns: auto [p-start] 30px [c-start] 1200px [c-end] 30px [p-end] auto
   @include respond-to(xxl)
-    grid-template-columns: auto [p-start] 30px [c-start] 1100px [c-end] 30px [p-end] auto
+    grid-template-columns: auto [p-start] 30px [c-start] 1000px [c-end] 30px [p-end] auto
   @include respond-to(xl)
-    grid-template-columns: auto [p-start] 30px [c-start] 900px [c-end] 30px [p-end] auto
+    grid-template-columns: auto [p-start] 30px [c-start] 800px [c-end] 30px [p-end] auto
   @include respond-to(lg)
-    grid-template-columns: auto [p-start] 30px [c-start] 660px [c-end] 30px [p-end] auto
+    grid-template-columns: auto [p-start] 30px [c-start] 600px [c-end] 30px [p-end] auto
   @include respond-to(md)
     grid-template-columns: auto [p-start] 30px [c-start] 480px [c-end] 30px [p-end] auto
   @include respond-to(sm)
-    grid-template-columns: [p-start] 15px [c-start] auto [c-end] 15px [p-end]
+    grid-template-columns: [p-start] 10px [c-start] auto [c-end] 10px [p-end]
   &>.content 
     grid-column: c-start/c-end
     display: flex
@@ -39,11 +39,7 @@ a
     justify-content: center
 
 h1
-  font-size: 3.2rem
   margin: 30px 0
-  font-weight: 400
-  font-size: 75px
-  line-height: 85px
 h2
   font-size: 2.6rem
   margin: 15px 0
