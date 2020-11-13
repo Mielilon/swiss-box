@@ -19,3 +19,4 @@ setInterval(function() {
     $(`.slide_info-wrapper[data-content="${intervalCounter}"]`).addClass('slide_info-wrapper_active')
     $(`input[type='radio']`)[intervalCounter - 1].checked = true;
 }, 5000);
+
