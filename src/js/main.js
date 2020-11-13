@@ -6,3 +6,6 @@ $(`input[type='radio']`).change(function() {
     $(`.slide_info-wrapper`).removeClass('slide_info-wrapper_active')
     $(`.slide_info-wrapper[data-content="${id}"]`).addClass('slide_info-wrapper_active')
 });
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
