@@ -32,7 +32,7 @@ initialPoint=event.changedTouches[0];
 document.addEventListener('touchend', function(event) {
 event.preventDefault();
 event.stopPropagation();
-finalPoint = event.changedTouches[0];
+finalPoint=event.changedTouches[0];
 var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
 var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
 if (xAbs > 20 || yAbs > 20) {
@@ -44,13 +44,15 @@ if (finalPoint.pageX < initialPoint.pageX){
     $(`.slide_info-wrapper`).removeClass('slide_info-wrapper_active')
     $(`.slide_info-wrapper[data-content="${intervalCounter}"]`).addClass('slide_info-wrapper_active')
     $(`input[type='radio']`)[intervalCounter - 1].checked = true;
-}
+/*СВАЙП ВЛЕВО*/}
 else {
     intervalCounter--;
-    if (intervalCounter < len) intervalCounter = 3;
+    if (intervalCounter < 1) intervalCounter = 3;
     $(".slider").attr("data-slider", intervalCounter);
     $(`.slide_info-wrapper`).removeClass('slide_info-wrapper_active')
     $(`.slide_info-wrapper[data-content="${intervalCounter}"]`).addClass('slide_info-wrapper_active')
     $(`input[type='radio']`)[intervalCounter - 1].checked = true;
+    }
 }
-}}}, false);
+}
+}, false);
