@@ -1,11 +1,12 @@
 // Base
 body, html
-  font-family: "Source Sans Pro"
+  font-family: "Ubuntu"
   font-weight: 400
   font-size: 16px
   min-height: 100vh
+  min-width: 100vw
   margin: 0px
-  color: #222
+  color: white
   scroll-behavior: smooth
 
 *
@@ -33,10 +34,16 @@ a
     grid-template-columns: [p-start] 15px [c-start] auto [c-end] 15px [p-end]
   &>.content 
     grid-column: c-start/c-end
+    display: flex
+    align-items: center
+    justify-content: center
 
 h1
   font-size: 3.2rem
   margin: 30px 0
+  font-weight: 400
+  font-size: 75px
+  line-height: 85px
 h2
   font-size: 2.6rem
   margin: 15px 0
@@ -49,23 +56,3 @@ h4
 p
   font-size: 1rem
   margin: 10px 0
-
-.ttu
-  text-transform: uppercase
-
-.tac
-  text-align: center
-
-.button
-  display: inline-block
-  margin-top: 10px
-  background: linear-gradient(45deg, #00C9FF, #92FE9D)
-  color: #fff
-  text-decoration: none
-  text-transform: uppercase
-  font-weight: 600
-  border-radius: 10px
-  transition: .25s ease
-  padding: 10px 20px
-  &:hover
-    opacity: .75

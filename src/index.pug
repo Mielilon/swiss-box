@@ -5,31 +5,12 @@ head
   meta(http-equiv='X-UA-Compatible', content='ie=edge')
   title Document
   link(rel='stylesheet', href='css/main.css')
+  link(rel="preconnect" href="https://fonts.gstatic.com")
+  link(href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet")
 body
-  .container.l-wrapper
-    p.tac(style='font-size: .8rem; align-self: flex-start; border-right: 1px solid #222  ') auto
-    p.tac(style='font-size: .8rem; align-self: flex-start; border-right: 1px solid #222') 30px
-    .l-content.tac
-      h1.ttu
-        i.fas.fa-check
-        |  Your template is Ready 
-        sub(style='font-size: .8rem; font-weight: normal; text-transform: lowercase;') 3.2rem
-      h2
-        | How you can 
-        sub(style='font-size: .8rem; font-weight: normal;') 2.6rem
-      h3
-        | Start you perfect 
-        sub(style='font-size: .8rem; font-weight: normal;') 2rem
-      h4
-        | Layout 
-        sub(style='font-size: .8rem; font-weight: normal;') 1.4rem
-      p
-        | Repo: 
-        a(href='https://github.com/EasyGem/gulp-frontend') Gulp Frontend By EasyGem
-        sub(style='font-size: .8rem; font-weight: normal;') 1rem
-      p
-        a.button(href='#') Kinda Button
-        sub(style='font-size: .8rem; font-weight: normal;') Just nice button ^_^
-    p.tac(style='font-size: .8rem; align-self: flex-start; border-left: 1px solid #222') 30px
-    p.tac(style='font-size: .8rem; align-self: flex-start; border-left: 1px solid #222') auto
-script(src='js/main.js')
+
+  //= templates/header.pug
+  //= templates/slider.pug
+  //= templates/footer.pug
+  
+  script(src='js/main.js')
