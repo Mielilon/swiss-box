@@ -1,5 +1,17 @@
 //= jquery.min.js
 
+function preloadImages() {
+  for (var i = 0; i < arguments.length; i++) {
+    new Image().src = arguments[i];
+  }
+}
+
+preloadImages(
+  "./img/slide-1.jpg",
+  "./img/slide-2.jpg",
+  "./img/slide-3.jpg"
+);
+
 $(`input[type='radio']`).change(function() {
     const id = $(this).val()
     $(".slider").attr("data-slider", id);

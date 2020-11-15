@@ -15,7 +15,7 @@ $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "Content-type: text/html; charset=utf-8 \r\n";
 $headers .= "From: Smartbox+ — склад для хранения вещей <smartbox@gmail.com>\r\n";
 
-$recipient = "Dim89150740074@gmail.com";
+$recipient = "darya.mg354@mail.ru";
 $subject = "Заявка на рассылку";
 
 if(isset($name) && isset($phone)) {
