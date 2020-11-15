@@ -44,7 +44,7 @@ if (finalPoint.pageX < initialPoint.pageX){
     $(`.slide_info-wrapper`).removeClass('slide_info-wrapper_active')
     $(`.slide_info-wrapper[data-content="${intervalCounter}"]`).addClass('slide_info-wrapper_active')
     $(`input[type='radio']`)[intervalCounter - 1].checked = true;
-/*СВАЙП ВЛЕВО*/}
+}
 else {
     intervalCounter--;
     if (intervalCounter < 1) intervalCounter = 3;
@@ -56,3 +56,70 @@ else {
 }
 }
 }, false);
+
+
+$(".slider__button").click(function (event) {
+    $('.form-wrapper').addClass('form-wrapper_active');
+  })
+
+$(".exit").click(function (event) {
+    $('.form-wrapper').removeClass('form-wrapper_active');
+  })
+
+$(document).on('click',function (e) {
+    if($(e.target).closest('.form').length) return;
+    if($(e.target).closest('.slider__button').length) return;
+    $('.form-wrapper').removeClass('form-wrapper_active');
+   });
+   
+
+
+   function initForm() {
+    $('form').submit(function (e) {
+      e.preventDefault();
+      let mailExp = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+      let theForm = $(this);
+      const email = theForm.find('input[name="email"]').val();
+      const name = theForm.find('input[name="name"]').val();
+      const phone = theForm.find('input[name="phone"]').val();
+  
+      if (email && !mailExp.test(email)) {
+        theForm.find('.form__errors').text('Почта введена некорректно');
+        return false;
+      } else {
+        if (!name || !phone) {
+          theForm.find('.form__errors').text('Заполните все поля');
+          return false;
+        } else {
+          theForm.find('.form__errors').text('');
+        }
+      }
+  
+      $.ajax({
+        type: 'POST',
+        url: 'mail.php',
+        data: theForm.serialize(),
+      })
+        .done(function () {
+          theForm
+            .find('.form__status')
+            .text('Сообщение успешно отправлено!')
+            .addClass('mt-12');
+          theForm.find('.form__submit').hide();
+        })
+        .fail(function () {
+          theForm
+            .find('.form__status')
+            .text(
+              'Ошибка отправки сообщения. Пожалуйста, повторите попытку'
+            )
+            .addClass('mt-12');
+          theForm.find('.form__submit').hide();
+        });
+  
+      return false;
+    });
+  }
+  
+  initForm();
+  
