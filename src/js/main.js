@@ -30,6 +30,8 @@ event.stopPropagation();
 initialPoint=event.changedTouches[0];
 }, false);
 document.addEventListener('touchend', function(event) {
+if($(event.target).closest('.form').length) return;
+if($(event.target).closest('.slider__button').length) return;
 event.preventDefault();
 event.stopPropagation();
 finalPoint=event.changedTouches[0];

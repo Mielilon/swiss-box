@@ -90,10 +90,12 @@
         
 
 @include respond-to(sm)
-    .form
-        width: 100vw 
-        height: 100vh
+    .form-wrapper_active
+        .form
+            width: 100vw 
+            height: 100vh
 @media screen and ( max-width: 360px )
-    .form
-        &__input
-            width: 100%
+    .form-wrapper_active
+        .form
+            &__input
+                width: 100%

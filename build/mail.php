@@ -8,7 +8,6 @@ $formcontent = "Заявка на рассылку <br>
               <li>Имя: $name</li>
               <li>Телефон: $phone</li>
               <li>Email: $email</li>
-              <li>Комментарий: $comment</li>
             </ul>
             ";
 
