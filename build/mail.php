@@ -13,7 +13,7 @@ $formcontent = "Заявка на рассылку <br>
 
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "Content-type: text/html; charset=utf-8 \r\n";
-$headers .= "From: Smartbox+ — магазин цветов и подарков <smartbox@gmail.com>\r\n";
+$headers .= "From: Smartbox+ — склад для хранения вещей <smartbox@gmail.com>\r\n";
 
 $recipient = "darya.mg354@mail.ru";
 $subject = "Заявка на обратный звонок";
