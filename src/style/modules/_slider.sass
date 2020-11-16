@@ -42,13 +42,21 @@
             background: #1A7A67
             border-radius: 100%
 
-    .background-green
+    .background_green
         background-color: rgba(23, 79, 68, 0.65)
         height: calc( 100vh - 210px )
         position: absolute
         width: 100%
         top: 120px
         left: 0
+    .background_1
+        background-image: url('./../img/slide-1.jpg')
+    .background_2
+        background-image: url('./../img/slide-2.jpg')
+    .background_3
+        background-image: url('./../img/slide-3.jpg')
+    .background_1, .background_2, .background_3
+        display: none
     .slide
         width: 100vw
         height: calc( 100vh - 210px )
@@ -76,10 +84,7 @@
     transition: .3s
 
 [data-slider="3"]
-    background-repeat: no-repeat
-    background-position: center
-    background-size: cover
-    background-image: url('./../img/slide-3.jpg')
+    @include background-image('./../img/slide-3.jpg')
     transition: .3s
         
     
